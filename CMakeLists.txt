@@ -13,7 +13,8 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(TEST_explo_qt main.cpp)
+add_executable(TEST_explo_qt main.cpp
+)
 target_link_libraries(TEST_explo_qt
         Qt::Core
         Qt::Gui
