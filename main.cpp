@@ -1,27 +1,12 @@
 
-#include <QtWidgets>
+#include "Test_file_qt.h"
+#include <QApplication>
 
 
 int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    QWidget window;
-    QLabel *etiquette = new QLabel("Recherche:");
-    QLineEdit *ligneEdition = new QLineEdit();
-    auto *boutonTest1 = new QPushButton("OK");
+    QApplication app(argc, argv);
 
-    window.resize(300,200);
-    window.setWindowTitle("Fenetre test");
-
-    QHBoxLayout *layout = new QHBoxLayout();
-    layout->addWidget(etiquette);
-    layout->addWidget(ligneEdition);
-    layout->addWidget(boutonTest1);
-    window.setLayout(layout);
-
-    QObject::connect(boutonTest1, &QPushButton::clicked, [&]() {
-    etiquette->setText("...");
-});
-
+    Test_file_qt window;
     window.show();
 
     return QApplication::exec();

@@ -14,6 +14,9 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(TEST_explo_qt main.cpp
+        test_file_qt.cpp
+        test_file_qt.h
+        test_file_qt.ui
 )
 target_link_libraries(TEST_explo_qt
         Qt::Core
